@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boat Runner</title>
+    <link rel="stylesheet" href="assets/style_index.css">
+    <link rel="stylesheet" href="assets/font.css">
+    
+    <script>
+        function load(){
+            if (loaded){
+                document.getElementById("c").style.visibility = "visible";
+                document.getElementById("commands").style.visibility = "visible";
+                document.getElementById("loading").style.visibility = "hidden";
+                }
+        }
+
+	function appendPoints(points) {
+		document.getElementById("points").innerHTML = "Distance: " + points;
+	}
+    </script>
+
+    <script type="text/javascript" src="lib/webgl-obj-loader.min.js"></script>
+    <script type="text/javascript" src="lib/utils.js"></script>
+    <script type="text/javascript" src="lib/quaternion.min.js"></script>
+    <script type="text/javascript" src="WorldView.js"></script>
+    <script type="text/javascript" src="loadMeshesAndTextures.js"></script>
+    <script type="text/javascript" src="drawingObj.js"></script>
+    
+</head>
+
+
+<body>
+    
+    <div id="loading">
+    <h1>Loading Game...</h1> 
+    <br>
+    <br>
+    <h2>Powered by Sacco, Tornielli, Ventura</h2>
+    </div>
+
+    
+    
+  	<canvas id="c">
+		Your browser does not support WebGL.
+	</canvas>
+
+<div id="commands">
+        <p>
+        <b style="font-weight: bold;">COMMANDS:</b>
+	<br>
+        <br>
+        <b>Move Forward:</b> <b>▲</b>
+        <br>
+        <b>Turn Right:</b> <b>►</b>
+        <br>
+        <b>Turn Left:</b> <b>◄</b>
+	<br>
+	<div id="points"></div>
+        </p>
+      </div>
+</body>
+
+</html>
